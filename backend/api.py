@@ -20,10 +20,11 @@ app.add_middleware(
 
 
 class GuestSchema(BaseModel):
-    fullnames: str
-    is_present: bool
-    will_congratulating: bool
-    meat_or_fish: str
+    name: str
+    present: bool
+    marry: bool
+    twoday: bool
+    food: str
 
 
 @app.post('/save_form')
@@ -39,8 +40,8 @@ async def save_form(data: GuestSchema):
             with conn.cursor() as cur:
                 cur.execute(
                     """
-                    INSERT INTO guests_form (fullnames, is_present, will_congratulating, meat_or_fish)
-                    VALUES (%(fullnames)s, %(is_present)s, %(will_congratulating)s, %(meat_or_fish)s) returning *;
+                    INSERT INTO guests_form (name, present, marry, twoday, food)
+                    VALUES (%(name)s, %(present)s, %(marry)s, %(twoday)s, %(food)s) returning *;
                     """,
                     data.model_dump()
                 )

@@ -1,0 +1,125 @@
+/* нарисованные элементы дизайна */
+/* линии */
+.line {
+    background-color: black;
+    width: 80px;
+    height: 1px;
+}
+
+.line.vertical {
+    width: 1px;
+    height: 80px;
+}
+
+.line70 {
+    background-color: black;
+    width: 1px;
+    height: 70px;
+    display: flex;
+    margin-right: 8px;
+}
+
+.short_line {
+    width: 20px;
+    height: 2px;
+    display: flex;
+    backdrop-filter: invert(100%);
+}
+
+/* фон для календаря */
+.brown_background {
+    display: block;
+    background-color: #45342C;
+    height: 40px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slay_brown_background {
+    background-color: rgb(179, 172, 164, 40%);
+    display: block;
+    height: 40px;
+    width: 100vw;
+}
+
+.big_brown_background {
+    display: block;
+    background-color: rgb(179, 172, 164, 40%);
+    height: 60px;
+    width: 100vw;
+}
+
+.location p {
+    margin: 0px;
+    padding-top: 12px;
+}
+
+/* кружочки */
+.blue_cell {
+    border-radius: 100%;
+    background-color: #66758A;
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.semi_blue_cell {
+    border-radius: 100%;
+    background-color: #9FB3D0;
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.pink_cell {
+    border-radius: 100%;
+    background-color: #7A5C66;
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.semi_pink_cell {
+    border-radius: 100%;
+    background-color: #D0ACB0;
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.green_cell {
+    border-radius: 100%;
+    background-color: #989D99;
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.semi_green_cell {
+    border-radius: 100%;
+    background-color: #CCD8CC;
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.black_cell {
+    border-radius: 100%;
+    background-color: #444444;
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.semi_black_cell {
+    border-radius: 100%;
+    background-color: #BDBDBD;
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+

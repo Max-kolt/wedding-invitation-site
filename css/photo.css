@@ -1,0 +1,66 @@
+.close_icon {
+    background-image: url(/static/icons/Close.svg);
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 102;
+}
+
+.menu_icon {
+    background-image: url(/static/icons/Menu.svg);
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.loft_photo {
+    background-image: url(/static/photo/loft_photo.jpg);
+    background-size:cover;
+    display: flex;
+    margin-top: 20px;
+    width: 100vw;
+    height: 70px;
+}
+
+.zags_photo{
+    background-image: url(/static/photo/zags.png);
+    background-size:cover;
+    display: flex;
+    margin-top: 20px;
+    width: 100vw;
+    height: 70px;
+}
+.top_arrow {
+    background-image: url(/static/icons/Arrow-up.svg);
+    background-size: cover;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 30px;
+}
+
+.diy {
+    background-image: url(/static/photo/DIY.png);
+    background-size: cover;
+    position: absolute;
+    width: 164px;
+    height: 259px;
+    right: 0px;
+    top: 0px;
+}
+
+.diysit {
+    background-image: url(/static/photo/diysit.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 40px;
+    width: 200px;
+    height: 154px;
+
+}

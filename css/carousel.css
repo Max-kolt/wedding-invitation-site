@@ -1,0 +1,31 @@
+.main__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo.white.carousel {
+    font-size: 128px;
+    position: absolute;
+    align-self: center;
+    z-index: 2;
+    padding-top: 30px;
+    top: 0px;
+
+}
+
+h1.carousel {
+    position: absolute;
+    z-index: 2;
+    align-self: center;
+    top: 150px;
+}
+
+.mainphoto {
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/static/photo/mainphoto.png);
+    width: 100vw;
+    height: 829px;
+
+}

@@ -1,9 +1,10 @@
 create table guests_form (
 	id integer primary key GENERATED ALWAYS AS IDENTITY,
-	fullnames varchar(255) not null,
-	is_present boolean not null default 't',
-	will_congratulating boolean not null default 'f',
-	meat_or_fish varchar(255) not null,
+	name varchar(255) not null,
+	present boolean not null default 't',
+	marry boolean not null default 't',
+	twoday boolean not null default 'f',
+	food varchar(255) not null,
 
 	created_at timestamp default (now())
 );

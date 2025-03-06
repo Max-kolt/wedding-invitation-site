@@ -1,36 +1,79 @@
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/photo.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/timing.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/carousel.css">
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Свадьба Максим и София</title>
   </head>
   <body>
     <!-- кнопка меню -->
     <section id="header">
       <div class="menu_button__wrapper">
-        <div class="menu_button__content"></div>
+        <div class="menu_button__content">
+          <span class="menu_lines">
+            <span class="short_line"></span>
+            <span class="short_line"></span>
+            <span class="short_line"></span>
+          </span>
+        </div>
       </div>
     </section>
 
     <!-- меню -->
-    <section id="menu">
+    <section id="menu" class="closed">
       <div class="menu__wrapper">
-        <div class="menu__content"></div>
+        <div class="menu__content">
+          <span class="close_icon"></span>
+          <h1 class="logo">M&S</h1>
+          <nav> 
+            <ul class="navigation_list"> 
+              <li> <a class="navigation_point" href="#main">главная</a></li>
+              <li> <a class="navigation_point" href="#date">дата свадьбы</a></li>
+              <li> <a class="navigation_point" href="#place">место проведения</a></li>
+              <li> <a class="navigation_point" href="#timing">программа дня</a></li>
+              <li> <a class="navigation_point" href="#dress_code">дресс-код</a></li>
+              <li> <a class="navigation_point" href="#form">анкета</a></li>
+              <li> <a class="navigation_point" href="#contacts">контакт</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </section>
 
     <!-- главная секция с каруселью из картинок -->
-    <section id="main"></section>
+    <section id="main">
+      <div class="main__wrapper">
+        <div class="main__content">
+          <h1 class="logo white carousel">M&S</h1>
+          <h1 class="carousel">Maxim & Sofia</h1>
+          <span class="mainphoto"></span>
+        </div>
+      </div>
+    </section>
 
     <!-- секция с обращением -->
     <section id="invocation">
       <div class="inocation__wrapper">
         <div class="invocation__content">
           <h2>Дорогие гости</h2>
-          <p>
-            Мы с огромной радостью приглашаем Вас разделить этот прекрасный день
-            нашей свадьбы
+          <p class="text_left">
+            Один день в этом году <br>
+            будет для нас особенным и <br>
+            мы хотим провести его <br>
+            в кругу близких и друзей. <br>
+            С удовольствием приглашаем<br>
+            Вас на знаменательный <br>
+            праздник - нашу свадьбу!
           </p>
+          <span class="diy"></span>
         </div>
       </div>
     </section>
@@ -42,41 +85,301 @@
         <div class="date__content">
           <h2>Дата Свадьбы</h2>
 
-	  <!-- календарь -->
+          <!-- календарь -->
           <div class="calendar">
-            <span class="grey_background">
-              <h3>май 2025</h3>
+            <span class="brown_background">
+              <h3>may 2025</h3>
             </span>
 	    
             <div class="calendar_table">
-              <table></table>
+              <table>
+                <tbody>
+                  <tr> <th></th> <th></th> <th></th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> </tr>
+                  <tr> <th>5</th> <th>6</th> <th>7</th> <th>8</th> <th>9</th> <th>10</th> <th>11</th> </tr>
+                  <tr> <th>12</th> <th>13</th> <th class="current">14</th> <th>15</th> <th>16</th> <th>17</th> <th>18</th> </tr>
+                  <tr> <th>19</th> <th>20</th> <th>21</th> <th>22</th> <th>23</th> <th>24</th> <th>25</th> </tr>
+                  <tr> <th>26</th> <th>27</th> <th>28</th> <th>29</th> <th>30</th> <th>31</th> <th></th> </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 	  
-	  <!-- кнопка для добавления события в календарь -->
+	        <!-- кнопка для добавления события в календарь -->
           <span class="right_side">
-            <a href="http://">добавьте в свой календарь</a>
+            <a href="https://calendar.app.google/rxxvcAaV56qAKKsR9">добавьте в свой календарь</a>
           </span>
         </div>
       </div>
     </section>
 
     <!-- секция с местом проведения -->
-    <section id="place"></section>
+    <section id="place">
+      <div class="place__wrapper">
+        <div class="place__content">
+          <h2>Место проведения</h2>
+          <div class="location">
+            <div>
+              <!-- загс -->
+              <div class="flex gap">
+                <span class="line"></span>
+                <h4>ЗАГС №1</h4>
+                <span class="line"></span>
+              </div>
+              <span class="zags_photo"></span>
+              <p class="slay_brown_background">
+                Санкт-Петербург, Английская набережная, 28
+              </p>
+              <!-- кнопка для просмотра места на карте -->
+              <span class="right_side">
+                <a href="https://yandex.ru/maps/-/CHBBMB1h">посмотреть на карте</a>
+              </span>
+            </div>
+
+            <div>
+              <!-- банкет -->
+              <div class="flex gap">
+                <span class="line"></span>
+                <h4>EVENT LOFT</h4>
+                <span class="line"></span>
+              </div>
+              <span class="loft_photo"></span>
+              <p class="big_brown_background">
+                Санкт-Петербург наб. реки Фонтанки 59В <br>
+                (вход через бизнес-центр “Лениздат”) 
+              </p>
+              <!-- кнопка для просмотра места на карте -->
+              <span class="right_side">
+                <a href="https://yandex.ru/maps/org/event_loft/199926560067/?ll=30.331782%2C59.928033&z=16.67">посмотреть на карте</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- секция с таймингами -->
-    <section id="timings"></section>
+    <section id="timing">
+      <div class="timing__wrapper">
+        <div class="timing__content">
+          <h2>Программа дня</h2>
+
+          <div class="list_timing">
+            <!-- элемент сбора -->
+            <div class="item">
+              <div class="pin">
+                <span class="destanation_icon"></span>
+                <span class="line_brown"></span>
+              </div>
+              <div class="description">
+                <p class="bolt">16:30</p>
+                <p>СБОРЫ ГОСТЕЙ</p>
+                <p class="brown">ждем всех, желающих посетить церемонию <br>
+                  регистрации брака, в загсе №1</p>
+              </div>
+            </div>
+            <!-- элемент роспись -->
+            <div class="item">
+              <div class="pin">
+                <span class="wedding_icon"></span>
+                <span class="line_brown"></span>
+              </div>
+              <div class="description">
+                <p class="bolt">17:00</p>
+                <p>РОСПИСЬ</p>
+                <p class="brown">может быть трогательно, разрешается <br>
+                  всплакнуть</p>
+              </div>
+            </div>
+            <!-- элемент фуршет -->
+            <div class="item">
+              <div class="pin">
+                <span class="glass_icon"></span>
+                <span class="line_brown"></span>
+              </div>
+              <div class="description">
+                <p class="bolt">17:30</p>
+                <p>ФУРШЕТ</p>
+                <p class="brown">ждем тех, кто пропустил роспись, <br>
+                  в банкетном зале event loft </p>
+              </div>
+            </div>
+            <!-- элемент банкет -->
+            <div class="item">
+              <div class="pin">
+                <span class="banquet_icon"></span>
+                <span class="line_brown"></span>
+              </div>
+              <div class="description">
+                <p class="bolt">18:00</p>
+                <p>НАЧАЛО БАНКЕТА</p>
+                <p class="brown">самое время для вкусной еды, танцев <br>
+                  и поздравленй</p>
+              </div>
+            </div>
+            <!-- элемент конец -->
+            <div class="item">
+              <div class="pin">
+                <span class="salute_icon"></span>
+              </div>
+              <div class="description">
+                <p class="bolt">23:00</p>
+                <p>ЗАВЕРШЕНИЕ ТОРЖЕСТВА</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- секция с дресс-кодом -->
-    <section id="dress_code"></section>
+    <section id="dress_code">
+      <div class="dress_code__wrapper">
+        <div class="dress_code__content">
+          <h2>Дресс-код</h2>
+          <p>
+            Мы старались сделать праздник особенным <br>
+            и будем рады, если в своих нарядах вы <br>
+            поддержите цветовую гамму и станете <br>
+            украшением на нашей свадьбе 
+          </p>
+
+          <!-- кнопка переключения пола -->
+          <span class="right_side">
+            <p class="brown"><span class="dress_toggle">женщины</span></p>
+          </span>
+
+          <div class="grid_cols3">
+            <img src="/static/photo/bluewom.jpg" class="womphoto" alt="bluewom">
+            <img src="/static/photo/blueman.jpg" class="manphoto closed" alt="blueman">
+            <div class="four_cell">
+              <span class="blue_cell"></span>
+              <span class="semi_blue_cell"></span>
+              <span class="pink_cell"></span>
+              <span class="semi_pink_cell"></span>
+            </div>
+            <img src="/static/photo/pinkwom.jpg" class="womphoto" alt="pinkwom">
+            <img src="/static/photo/pinkman.jpg" class="manphoto closed" alt="blueman">
+
+            <img src="/static/photo/greenman.jpg" class="manphoto closed" alt="blueman">
+            <img src="/static/photo/greenwom.jpg" class="womphoto" alt="greenwom">
+            <div class="four_cell">
+              <span class="green_cell"></span>
+              <span class="semi_green_cell"></span>
+              <span class="black_cell"></span>
+              <span class="semi_black_cell"></span>
+            </div>
+            <img src="/static/photo/blackwom.jpg" class="womphoto" alt="blackwom">
+            <img src="/static/photo/blackman.jpg" class="manphoto closed" alt="blueman">
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <!-- секция с анкетой -->
-    <section id='form'></section>
+    <section id='form'>
+      <div class="form__wrapper">
+        <div class="form__content">
+          <h2>Анкета</h2>
+          <form> 
+            <div>
+              <label for="name">Имя и фамилия</label> 
+              <small>*если вы пара или вас несколько, то впишите имена каждого</small> 
+              <textarea oninput="auto_grow(this)" id="name" required></textarea>
+            </div>
+            <div>
+              <label for="present">Собираетесь ли присутствовать?</label> 
+              <div class="grid_cols2">
+                <div>
+                  <input type="radio" name="present" id="yes_present" checked>
+                  <label class="check" for="yes_present">Да, с удовольствием!</label>
+                </div>
+                <div >
+                  <input type="radio" name="present" id="no_present">
+                  <label class="check" for="no_present">Нет, к сожалению :(</label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label for="marry">Хотите ли посетить церемонию в загсе?</label> 
+              <div class="grid_cols2">
+                <div>
+                  <input type="radio" name="marry" id="yes_marry" checked>
+                  <label class="check" for="yes_marry">Да, с удовольствием ^.^</label>
+                </div>
+                <div >
+                  <input type="radio" name="marry" id="no_marry">
+                  <label class="check" for="no_marry">Нет, приеду к фуршету</label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label for="twodays">Хотите ли праздновать свадьбу 2 дня?</label> 
+              <div class="grid_cols2">
+                <div>
+                  <input type="radio" name="twodays" id="yes_want" checked>
+                  <label class="check" for="yes_want">Да, продолжим веселье!</label>
+                </div>
+                <div>
+                  <input type="radio" name="twodays" id="no_send">
+                  <label class="check" for="no_send">Нет, я занятой *-* </label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label for="eats">Предпочитаете: рыбу или мясо?</label>
+              <small>*если вы пара или вас несколько, то впишите для каждого</small> 
+              <textarea oninput="auto_grow(this)" id="eats" required></textarea>
+            </div>
+            <!-- кнопка отправить -->
+            <div class="right_side">
+              <button class="send_request">ОТПРАВИТЬ <span class="req_arrow"></span></button>
+            </div>
+          </form>
+          
+          
+        </div>
+      </div>
+      <!-- Приятный текст снизу -->
+      <div class="plesent_text">
+        <span class="brown_background">
+          <h4 class="small">Будем рады Вас видеть!</h4>
+        </span>
+        <span class="diysit"></span>
+      </div>
+    </section>
+    
+
 
     <!-- секция с контактами -->
-    <section id='contacts'></section>
+    <section id='contacts'>
+      <div class="contacts__wrapper">
+        <div class="contacts__content">
+          <h2>Контакт</h2>
+          <p class="text_left">
+            В случае, если вы потерялись или у вас  <br>
+            появились иные вопросы по нашей свадьбе, <br>
+            обращайтесь к нашему организатору
+          </p>
+          <p class="text_left">ИРИНА:  <a href="tel:+79118267613">+7 (911) 826-76-13</a></p>
+        </div>
+      </div>
+    </section>
 
     <!-- подвал -->
-    <section id='footer'></section>
+    <section id='footer'>
+      <div class="footer__wrapper">
+        <div class="footer__content">
+          <h1 class="logo white">M&S</h1>
+          <a href="#main"><span class="top_arrow"></span></a>
+        </div>
+      </div>  
+    </section>
   </body>
+
+
+  <script src="/js/menu_toggle.js"></script>
+  <script src="/js/grow.js"></script>
+  <script src="/js/dress_toggle.js"></script>
+  <script src="/js/send_request.js"></script>
 </html>
