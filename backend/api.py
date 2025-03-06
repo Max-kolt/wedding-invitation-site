@@ -4,7 +4,7 @@ from pydantic import BaseModel
 import psycopg2
 from datetime import datetime
 
-from config import database_config
+from config import database_config, logger
 
 
 app = FastAPI()
@@ -47,11 +47,11 @@ async def save_form(data: GuestSchema):
                 )
 
                 result = cur.fetchone()
-                print(f'Add new guest {result[-1].strftime("%Y/%m/%d %H:%M")}:  {result[:-1]}')
+                logger.info(f'Add new guest {result[-1].strftime("%Y/%m/%d %H:%M")}:  {result[:-1]}')
 
                 return result
         except Exception as error:
-            print(error)
+            logger.error(error)
             raise HTTPException(status_code=504, detail="Can't save data to base")
 
 

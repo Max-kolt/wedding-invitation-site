@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings
 from dotenv import load_dotenv
+from loguru import logger
 load_dotenv()
 
 
@@ -12,3 +13,9 @@ class DatabaseConfig(BaseSettings):
 
 
 database_config = DatabaseConfig()
+
+
+logger.add(
+    'logs/log_{time:YYYY-MM-DD}.log', rotation="50 MB", compression="gz", level="INFO", diagnose=False,
+    backtrace=False, colorize=True
+)
