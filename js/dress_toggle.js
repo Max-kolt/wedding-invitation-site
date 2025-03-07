@@ -7,7 +7,7 @@ button_dress.addEventListener("click", function tooglePhotos(e) {
   girlsPhoto.forEach(toggleElementClosed);
   boysPhoto.forEach(toggleElementClosed);
   button_dress.textContent =
-    button.textContent == "мужчины" ? "женщины" : "мужчины";
+    button_dress.textContent == "мужчины" ? "женщины" : "мужчины";
 });
 
 function toggleElementClosed(element) {

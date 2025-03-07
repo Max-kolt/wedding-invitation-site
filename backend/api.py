@@ -7,7 +7,7 @@ from datetime import datetime
 from config import database_config, logger
 
 
-app = FastAPI()
+app = FastAPI(openapi_url='/api/v1')
 
 
 app.add_middleware(
