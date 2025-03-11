@@ -3,11 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import psycopg2
 from datetime import datetime
+import uvicorn
 
 from config import database_config, logger
 
 
-app = FastAPI(root_path='/api/v1')
+app = FastAPI()
 
 
 app.add_middleware(
@@ -55,4 +56,17 @@ async def save_form(data: GuestSchema):
             raise HTTPException(status_code=504, detail="Can't save data to base")
 
 
+@app.get('/')
+async def welcome():
+    return 'Hello world'
+
+
+if __name__ == '__main__':
+    server_settings = {
+        "host": '0.0.0.0',
+        "port": 8080,
+        "reload": False,
+        "workers": None
+    }
+    uvicorn.run(app, **server_settings)
 

@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 COPY . /app
 
-CMD ["uvicorn", "api:app", "--workers", "4", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["python", "api.py"]
