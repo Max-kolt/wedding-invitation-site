@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
 from schema import GuestSchema
 import psycopg2
@@ -9,8 +9,7 @@ from config import database_config, logger
 from send_telegram import send_to_chat
 
 
-app = FastAPI()
-
+app = FastAPI(title='Wedding site API', root_path='/api/v2')
 
 app.add_middleware(
     CORSMiddleware,
@@ -42,7 +41,6 @@ async def save_form(data: GuestSchema):
                 result = cur.fetchone()
                 logger.info(f'Add new guest {result[-1].strftime("%Y/%m/%d %H:%M")}:  {result[:-1]}')
 
-
         except Exception as error:
             logger.error(error)
             raise HTTPException(status_code=504, detail="Can't save data to base")
@@ -50,6 +48,7 @@ async def save_form(data: GuestSchema):
         send_to_chat(data)
 
         return result
+
 
 @app.get('/')
 async def welcome():
