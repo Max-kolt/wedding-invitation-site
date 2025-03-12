@@ -19,7 +19,7 @@ request_button.addEventListener("click", function (event) {
   });
 
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "http://maximsofia.ru/api/v2/save_form", false);
+  xhr.open("POST", "https://maximsofia.ru/api/v2/save_form", false);
   xhr.setRequestHeader("Content-Type", "application/json");
 
   xhr.send(data);
