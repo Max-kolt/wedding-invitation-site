@@ -1,11 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from schema import GuestSchema
 import psycopg2
 from datetime import datetime
 import uvicorn
 
 from config import database_config, logger
+from send_telegram import send_to_chat
 
 
 app = FastAPI()
@@ -18,15 +19,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
-class GuestSchema(BaseModel):
-    name: str
-    present: bool
-    marry: bool
-    twoday: bool
-    food: str
-
 
 @app.post('/save_form')
 async def save_form(data: GuestSchema):
@@ -50,11 +42,14 @@ async def save_form(data: GuestSchema):
                 result = cur.fetchone()
                 logger.info(f'Add new guest {result[-1].strftime("%Y/%m/%d %H:%M")}:  {result[:-1]}')
 
-                return result
+
         except Exception as error:
             logger.error(error)
             raise HTTPException(status_code=504, detail="Can't save data to base")
 
+        send_to_chat(data)
+
+        return result
 
 @app.get('/')
 async def welcome():

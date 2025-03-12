@@ -15,6 +15,14 @@ class DatabaseConfig(BaseSettings):
 database_config = DatabaseConfig()
 
 
+class TelegramConfig(BaseSettings):
+    TOKEN: str
+    CHAT_ID: str
+
+
+tg_config = TelegramConfig()
+
+
 logger.add(
     'logs/log_{time:YYYY-MM-DD}.log', rotation="50 MB", compression="gz", level="INFO", diagnose=False,
     backtrace=False, colorize=True
