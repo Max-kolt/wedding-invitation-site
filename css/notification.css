@@ -1,0 +1,39 @@
+#notification {
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  transition: 0.6s;
+}
+
+#notification.closed {
+  top: -100vh;
+}
+
+.notification__wrapper {
+  width: 250px;
+  height: 80px;
+}
+
+.notification__content {
+  background-color: rgb(68, 52, 44, 80%);
+  color: rgb(255, 255, 255);
+  width: auto;
+  height: fit-content;
+  position: relative;
+}
+
+.notification__content > p {
+  padding: 12px;
+  color: white;
+  font-size: 22px;
+}
+
+#notification .timelapse {
+  position: absolute;
+  display: block;
+  width: 250px;
+  background-color: rgb(255, 255, 255);
+  height: 4px;
+}

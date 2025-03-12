@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="css/timing.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/notification.css" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Приглашения на свадьбу Кольцовых</title>
   </head>
   <body>
     <!-- кнопка меню -->
@@ -24,6 +26,15 @@
             <span class="short_line"></span>
             <span class="short_line"></span>
           </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Уведомление об отправлении форма -->
+    <section id="notification" class="closed">
+      <div class="notification__wrapper">
+        <div class="notification__content">
+          <p>Ошибка сервера. Попробуйте повторить через 10 минут</p>
         </div>
       </div>
     </section>
@@ -258,7 +269,7 @@
                 <p class="bolt">17:30</p>
                 <p>ФУРШЕТ</p>
                 <p class="brown">
-                  ждем тех, кто пропустил роспись, <br />
+                  ждем тех, кто пропустил регистрацию, <br />
                   в банкетном зале event loft
                 </p>
               </div>
@@ -405,9 +416,7 @@
               <div class="grid_cols2">
                 <div>
                   <input type="radio" name="marry" id="yes_marry" checked />
-                  <label class="check" for="yes_marry"
-                    >Да, с удовольствием ^.^</label
-                  >
+                  <label class="check" for="yes_marry">Да, конечно ^.^</label>
                 </div>
                 <div>
                   <input type="radio" name="marry" id="no_marry" />
@@ -442,7 +451,7 @@
             <!-- кнопка отправить -->
             <div class="right_side">
               <button class="send_request">
-                ОТПРАВИТЬ <span class="req_arrow"></span>
+                ОТПРАВИТЬ <span class="req_arrow show"></span>
               </button>
             </div>
           </form>
@@ -489,4 +498,5 @@
   <script src="/js/grow.js"></script>
   <script src="/js/dress_toggle.js"></script>
   <script src="/js/send_request.js"></script>
+  <script src="/js/notification.js"></script>
 </html>
