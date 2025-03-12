@@ -9,7 +9,9 @@ from config import database_config, logger
 from send_telegram import send_to_chat
 
 
-app = FastAPI(title='Wedding site API', root_path='/api/v2')
+app = FastAPI(title='Wedding site API')
+
+v2_router = APIRouter(prefix='/api/v2')
 
 app.add_middleware(
     CORSMiddleware,
@@ -19,7 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.post('/save_form')
+@v2_router.post('/save_form')
 async def save_form(data: GuestSchema):
     with psycopg2.connect(
         database=database_config.DB_NAME,
@@ -50,9 +52,12 @@ async def save_form(data: GuestSchema):
         return result
 
 
-@app.get('/')
+@v2_router.get('/')
 async def welcome():
     return 'Hello world'
+
+
+app.include_router(v2_router)
 
 
 if __name__ == '__main__':
